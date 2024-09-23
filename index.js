@@ -49,9 +49,10 @@ console.log('====================')
 // 7. Write code that toggles the case of each character in a string.
 //***************** TASK 7  ******************//
 let text = "Hello World";
-let toggledText = text.split('').map(char =>
-    char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
-).join('');
+let toggledText = '';
+for (let char of text) {
+    toggledText += char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase();
+}
 console.log(`Task 7: ${toggledText}`);
 console.log('====================')
 // 8. Write a script that prompts the user to enter data using `prompt` and stores it in an array.
